@@ -17,14 +17,53 @@ Content-Type: application/json
     "release": "2015-10-30"
 }
 
+### Invalid parameters for POST - 1 (missing name and genre & invalid price range)
+POST http://localhost:5009/games
+Content-Type: application/json
+
+{
+    "price": 1000,
+    "release": "2015-10-30"
+}
+
+### Invalid parameters for POST - 2 (invalid name and genre length)
+POST http://localhost:5009/games
+Content-Type: application/json
+
+{
+    "name": "Peppa Pig kajshdfkajf asdfjasdfkl asdflhajsdkfljh asldfalskdfjh asldkfhalskdjfh",
+    "genre": "Kids asdkjfh asdfkjhaskdf asdfkjhasdkf",
+    "price": 10,
+    "release": "2015-10-30"
+}
+
 ###
 PUT http://localhost:5009/games/1
 Content-Type: application/json
 
 {
-    "id": 1,
     "name": "Ring Rivals II",
     "genre": "Boxing",
+    "price": 23.59,
+    "release": "2000-02-15"
+}
+
+### Invalid parameters for PUT - (missing name and genre & invalid price range)
+PUT http://localhost:5009/games/1
+Content-Type: application/json
+
+{
+    "price": 123.59,
+    "release": "2000-02-15"
+}
+
+### Invalid parameters for PUT - 2 (invalid name and genre length)
+PUT http://localhost:5009/games/1
+Content-Type: application/json
+
+{
+    "name": "Ring Rivals II Ring Rivals II Ring Rivals II Ring Rivals II Ring Rivals II Ring Rivals II Ring Rivals II Ring Rivals II Ring Rivals II Ring Rivals II Ring Rivals II Ring Rivals II",
+    "genre": "BoxingBoxingBoxingBoxingBoxingBoxingBoxingBoxingBoxingBoxingBoxingBoxing",
     "price": 23.59,
     "release": "2000-02-15"
 }
