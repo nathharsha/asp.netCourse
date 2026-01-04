@@ -2,3 +2,33 @@ GET http://localhost:5009/games
 
 ###
 GET http://localhost:5009/games/1
+
+###
+GET  http://localhost:5009/games/test
+
+###
+POST http://localhost:5009/games
+Content-Type: application/json
+
+{
+    "name": "Peppa Pig",
+    "genre": "Kids",
+    "price": 21.99,
+    "release": "2015-10-30"
+}
+
+###
+PUT http://localhost:5009/games/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "Ring Rivals II",
+    "genre": "Boxing",
+    "price": 23.59,
+    "release": "2000-02-15"
+}
+
+###
+DELETE http://localhost:5009/games/2
+Content-Type: application/json
