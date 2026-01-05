@@ -51,7 +51,7 @@ public static class GamesEndpoints
                 newGame.Name,
                 newGame.Genre,
                 newGame.Price,
-                newGame.Release
+                newGame.ReleaseDate
             );
 
             games.Add(game);
@@ -73,7 +73,7 @@ public static class GamesEndpoints
                 updatedGame.Name,
                 updatedGame.Genre,
                 updatedGame.Price,
-                updatedGame.Release
+                updatedGame.ReleaseDate
             );
 
             return Results.NoContent();
