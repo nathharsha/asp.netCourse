@@ -11,8 +11,8 @@ POST http://localhost:5009/games
 Content-Type: application/json
 
 {
-    "name": "Peppa Pig",
-    "genre": "Kids",
+    "name": "Twenty 20",
+    "genreId": 2,
     "price": 21.99,
     "release": "2015-10-30"
 }
@@ -69,5 +69,5 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:5009/games/2
+DELETE http://localhost:5009/games/3
 Content-Type: application/json
